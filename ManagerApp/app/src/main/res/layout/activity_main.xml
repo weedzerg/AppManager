@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".screens.activities.MainActivity">
 
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/pulsator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pulse_color="@color/colorAccent"
+        app:pulse_count="4"
+        app:pulse_duration="7000"
+        app:pulse_interpolator="Linear"
+        app:pulse_repeat="0"
+        app:pulse_startFromScratch="false"></pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+    <ImageView
+        android:id="@+id/img_app"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="center" />
+
     <TextView
         android:id="@+id/btn_scan"
         style="@style/TextMedium"
@@ -13,5 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/_10sdp"
-        android:text="@string/scan" />
+        android:text="@string/scan"
+        android:visibility="gone" />
 </FrameLayout>

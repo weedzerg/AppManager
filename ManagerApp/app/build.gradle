@@ -33,4 +33,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'pl.bclogic:pulsator4droid:1.0.3'
 }

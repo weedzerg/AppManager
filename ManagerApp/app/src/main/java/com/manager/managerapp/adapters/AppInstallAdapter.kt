@@ -12,8 +12,7 @@ import android.widget.TextView
 import com.manager.managerapp.R
 import com.manager.managerapp.objects.AppInstallObject
 
-private class AppInstallAdapter(context: Context,
-                                listener: ListenerAppInstall)
+class AppInstallAdapter(context: Context, listener: ListenerAppInstall)
     : RecyclerView.Adapter<AppInstallAdapter.AppInstallHolder>() {
     private var context: Context
     private var listener: ListenerAppInstall
@@ -46,7 +45,7 @@ private class AppInstallAdapter(context: Context,
     }
 
 
-    private inner class AppInstallHolder(view: View) : RecyclerView.ViewHolder(view),
+    inner class AppInstallHolder(view: View) : RecyclerView.ViewHolder(view),
             View.OnClickListener {
         private var imgIcon: ImageView
         private var imgUninstall: ImageView
@@ -69,7 +68,7 @@ private class AppInstallAdapter(context: Context,
         fun bindData() {
             var item = getApp(adapterPosition)
             textName.text = item.name
-            textVersion.text = item.version
+            textVersion.text = "${context.getString(R.string.version)} ${item.version}"
             textSize.text = item.size.toString()
             if (item.isNewVersion) {
                 imgUpdate.visibility = View.VISIBLE
